@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Report page</title>
+  </head>
+  <body>
+    <h1>DETAILS OF THE STUDENT</h1>
+    <div class="Report">
+      {% if inserting_the_student_details %}
+      <table border="2px" solid red>
+        <tr>
+          <th>STUDENT_ID</th>
+          <th>STUDENT_NAME</th>
+          <th>STUDENT_AGE</th>
+          <th>STUDENT_GENDER</th>
+          <th>STUDENT_NUMBER</th>
+          <th>STUDENT_EMAIL</th>
+
+        </tr>
+
+      {% for x in inserting_the_student_details %}
+      <tr>
+        <td>{{x.Std_ID}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.age}}</td>
+        <td>{{x.gender}}</td>
+        <td>{{x.phone}}</td>
+        <td>{{x.email}}</td>
+      </tr>
+      {% endfor %}
+             </table>
+      {% endif %}
+    </div>
+  </body>
+</html>
